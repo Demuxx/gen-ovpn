@@ -19,7 +19,7 @@ OptionParser.new do |opt|
   opt.on("-h", "--help", "Prints this help") { puts opt; exit }
 end.parse!
 
-`/etc/easyrsa/easyrsa build-client-full #{options[:client_name]} nopass`
+`/etc/openvpn/easy-rsa/easyrsa build-client-full #{options[:client_name]} nopass`
 
 @ca = File.read("/etc/easyrsa/pki/ca.crt").chomp("\n")
 @dh = File.read("/etc/easyrsa/pki/dh.pem").chomp("\n")
