@@ -1,0 +1,22 @@
+client
+nobind
+dev tun
+comp-lzo
+remote-cert-tls server
+
+remote <%= @server %> <%= @port %> <%= @proto %>
+
+<key>
+<%= @key %>
+</key>
+<cert>
+<%= @cert %>
+</cert>
+<ca>
+<%= @ca %>
+</ca>
+<dh>
+<%= @dh %>
+</dh>
+
+#redirect-gateway def1
